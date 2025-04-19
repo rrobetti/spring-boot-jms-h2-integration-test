@@ -44,6 +44,7 @@ public class JmsIntegrationTest {
         broker.setPersistent(false);
         broker.setUseJmx(false);
         broker.addConnector(BROKER_URL);
+        broker.setBrokerName("test-broker-1");  // Use a unique broker name
         broker.setUseShutdownHook(false); //Prevents broker shutdown hooked with JVM shutdown
         broker.start();
     }
